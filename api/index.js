@@ -4,6 +4,7 @@ import axios from 'axios'
 export default function (req, res, next) {
   // req is the Node.js http request object
 
+  // не понял
   if (req.url === '/getComments') {
     axios.get('https://jsonplaceholder.typicode.com/comments')
       .then((response) => {

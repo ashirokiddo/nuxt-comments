@@ -17,7 +17,8 @@
                 v-if="header.sortable"
                 class="sort-arrow"
               >
-                <ChevronUpMdi />
+                <ChevronUpMdi v-if="sortDir === 'asc'" />
+                <ChevronDownMdi v-else />
               </div>
             </div>
           </th>
@@ -140,6 +141,7 @@ export default {
         ? this.items
         : [...this.items].sort((a, b) => {
             let modifier = 1
+
             if (this.sortDir === 'desc') {
               modifier = -1
             }

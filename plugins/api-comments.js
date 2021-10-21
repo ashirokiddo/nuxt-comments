@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default (context, inject) => {
   inject('api', api)
 
@@ -6,6 +8,9 @@ export default (context, inject) => {
 
 const api = {
   getComments () {
-    return fetch('/api/getComments')
+    return axios.get('https://jsonplaceholder.typicode.com/comments')
+      .then((response) => {
+        return response
+      })
   }
 }

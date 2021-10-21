@@ -13,7 +13,7 @@
           :key="index"
           class="card__body__item"
         >
-          <span>{{propName}}:</span>  {{value}}
+          <span>{{ propName }}:</span>  {{ value }}
         </div>
       </div>
     </div>

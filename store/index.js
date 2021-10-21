@@ -15,7 +15,6 @@ export const actions = {
     }
 
     const data = await this.$api.getComments()
-    const comments = await data.json()
-    commit('setComments', comments)
+    commit('setComments', data.data)
   }
 }
